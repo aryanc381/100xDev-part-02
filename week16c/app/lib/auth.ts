@@ -1,11 +1,10 @@
-import NextAuth from "next-auth";
 import CredentialProvider from 'next-auth/providers/credentials';
-import dotenv from 'dotenv';
 import GoogleProvider from 'next-auth/providers/google';
+import dotenv from 'dotenv';
 
 dotenv.config();
 
-const handler = NextAuth({
+export const NEXT_AUTH = {
     providers: [
         CredentialProvider({
             name: 'Email',
@@ -25,10 +24,10 @@ const handler = NextAuth({
             clientId: process.env.CLIENT_ID!,
             clientSecret: process.env.CLIENT_SECRET!
         })
-
     ],
     secret: process.env.NEXTAUTH_SECRET,
     callbacks: {
+        //@ts-ignore
         jwt: ({token, user}) => {
             console.log(token);
             return token;
@@ -40,12 +39,5 @@ const handler = NextAuth({
             }
             return session;
         }
-    },
-    pages: {
-        signIn: '/signin',
-        signOut: '/signout'
     }
-});
-
-export const GET = handler;
-export const POST = handler;
+}

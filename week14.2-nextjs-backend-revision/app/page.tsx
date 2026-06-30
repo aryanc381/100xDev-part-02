@@ -1,4 +1,7 @@
+"use client";
 import axios from "axios";
+import signIn from 'next-auth';
+import signOut from 'next-auth';
 
 export default async function Home() {
   await new Promise(r => setTimeout(r, 5000));
@@ -9,4 +12,12 @@ export default async function Home() {
       <p>{response.data.email}</p>
     </div>
   );
+}
+
+
+export const Appbar = () => {
+    return <div>
+    <button onClick={() => signIn()}>Signin</button>
+    <button onClick={() => signOut()}>Sign out</button>
+  </div>
 }

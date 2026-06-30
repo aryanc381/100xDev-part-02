@@ -4,7 +4,7 @@ import cors from 'cors';
 const app = express();
 app.use(cors());
 
-app.listen(3000, () => {'APP is live on Port 3000'});
+app.listen(3000, () => console.log('APP is live on Port 3000'));
 
 app.get('/health', async (req, res) => {
     return res.json({ status: 200, msg: 'Backend is live and healthy.'})

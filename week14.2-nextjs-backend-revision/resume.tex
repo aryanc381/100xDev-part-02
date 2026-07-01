@@ -1,0 +1,271 @@
+% 
+% NIT Patna Resume Template v2.1 (Modified)
+% Author: Pavan Kumar Dubasi
+% 
+
+\documentclass[a4paper,11pt]{article}
+
+% Package imports
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\usepackage{fontawesome5}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\usepackage{tabularx}
+\usepackage{array}
+
+\definecolor{darkblue}{RGB}{0,0,139}
+
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+\setlength{\multicolsep}{0pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\footskip}{4.08pt}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+}
+
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=0pt,
+    right=0pt,
+    top=0pt,
+    bottom=0pt,
+    colback=gray!20,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=-2mm,
+    boxsep=4pt,
+    arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-8pt}]
+
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.3mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}}
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.3mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.3mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\circ$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.5mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*,labelsep=1mm,itemsep=0.4mm]}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{1.5mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{1.5mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+
+\newcommand{\socialicon}[1]{\raisebox{-0.05em}{\resizebox{!}{1em}{#1}}}
+\newcommand{\ieeeicon}[1]{\raisebox{-0.3em}{\resizebox{!}{1.3em}{#1}}}
+
+\newcommand{\name}{Aryan Chauhan}
+\newcommand{\course}{Bachelors of Technology}
+\newcommand{\roll}{XXXXXXXX}
+\newcommand{\phone}{+91 9049122622}
+\newcommand{\emaila}{aryancwork381@gmail.com}
+\newcommand{\emailb}{aryancwork381@gmail.com}
+\newcommand{\github}{aryanc381}
+\newcommand{\website}{https://www.linkedin.com/in/aryanc381/}
+\newcommand{\linkedin}{aryanc381}
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+
+%----------HEADING-----------------
+\begin{tabularx}{\linewidth}{L r}
+  \textbf{\LARGE \name} & \phone \\
+  \course & \href{mailto:\emaila}{\emaila} \\
+  Electronics \& Electrical Engineering (AI-ML) & \href{https://www.linkedin.com/in/\linkedin}{linkedin.com/in/\linkedin} \\
+  MIT World Peace University & \href{https://github.com/\github}{github.com/\github} \\
+\end{tabularx}
+\vspace{-2mm}
+
+\section{\textbf{Education}}
+\vspace{1mm}
+\setlength{\tabcolsep}{5pt}
+\begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|>{\centering\arraybackslash}p{8cm}|>{\centering\arraybackslash}p{3cm}|>{\centering\arraybackslash}p{2.5cm}|}
+  \hline
+  \textbf{Degree/Certificate} & \textbf{Institute/Board} & \textbf{CGPA/Percentage} & \textbf{Year} \\
+  \hline
+  B.Tech, ECE (AI-ML) & MIT World Peace University & 7.92 CGPA & 2026 \\
+  \hline
+  HSC (XII) & Arham Junior College & 77.77\% & 2022 \\
+  \hline
+  SSC (X) & Symbiosis School & 83.20\% & 2020 \\
+  \hline
+\end{tabularx}
+\vspace{-5mm}
+
+\section{\textbf{Experience}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumeSubheading
+    {Riverline AI [\href{https://riverline.ai}{$\nearrow$}]}{Bangalore, India}
+    {Software Engineer Intern}{Jan 2026 - Jun 2026}
+    \resumeItemListStart
+      \item Built an end-to-end predictive dialer using Next.js, Redis, and asynchronous job pipelines, increasing per-agent throughput from \textbf{80 to 400 debt-collection calls/day} (5x debt collections) across 50K+ borrower accounts.
+      \item Developed a production-grade WhatsApp AI agent orchestration for debt recovery designed for event-driven negotiation with banks and borrowers, deployed to \textbf{10K+ active borrowers}.
+      \item Built internal monitoring dashboards for campaign execution and webhook delivery, enabling non-technical ops teams to manage high-volume outbound campaigns reliably.
+    \resumeItemListEnd
+\resumeSubheading
+    {Ncomputing India [\href{https://www.ncomputing.com}{$\nearrow$}]}{Pune, India}
+    {Software Engineer Intern}{Jul 2025 - Dec 2025}
+    \resumeItemListStart
+      \item Developed an internal CRM Data \& Analytics Tool end-to-end, \textbf{reducing support closing time by 25\%}
+      \item Integrated Zoho ticketing system using Express, \textbf{improving technical support efficiency by 35\%}
+      \item Built a geofencing-based attendance and leave tracking system that eliminated misuse and ensured accurate check-ins across the PAN-India team
+    \resumeItemListEnd
+\resumeSubheading
+    {Rancho Labs [\href{https://rancholabs.com}{$\nearrow$}]}{Remote, Delhi}
+    {Advance AI \& Python Instructor}{May 2025 - Jun 2025}
+    \resumeItemListStart
+      \item Architected and taught Advance AI syllabus \textbf{driving 30\% student increase} through referral-based enrolments within the first month.
+      \item \textbf{Taught 50+ K-12 students} in Python, ML, DSA, CV, and NLP through practical code and real-world projects
+      \item Developed problem-solving clarity by breaking down advanced topics into accessible modules, \textbf{increasing student satisfaction by 40\%}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-7mm}
+
+\section{\textbf{Projects}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+
+\resumeProject
+    {KahaaniAI: A Conversational Tour Guide [\href{http://www.kahaani.site/}{$\nearrow$}] [\href{https://github.com/aryanc381/kahaani-ai-v3}{\textcolor{darkblue}{\faGithub}}]}
+    {Next.js, React, Express, Node.js, Websockets, TypeScript, MongoDB, AWS-EC2, Langchain, ElevenLabs, Mapbox}
+    {}
+    {}
+\resumeItemListStart
+    \item Built an AI-powered cultural tour guide using agentic workflows and geofencing -- delivers real-time, location-aware conversational tours through voice and chat interfaces
+    \item Integrated Langchain for LLM orchestration, ElevenLabs for voice synthesis, and Mapbox for geofenced triggers triggered by user location
+\resumeItemListEnd
+
+\resumeProject
+    {Sockify: Chat App with Memory Layer for Founders [\href{https://sockify.aryancodes.dev/}{$\nearrow$}] [\href{https://github.com/aryanc381/sockify}{\textcolor{darkblue}{\faGithub}}]}
+    {Next.js, React, Websockets, PostgreSQL, Prisma, Express, TypeScript, Redis, OpenAI, Langchain}
+    {}
+    {}
+\resumeItemListStart
+    \item Built real-time chat app with persistent memory layer tracking conversations, tasks, and follow-ups using pub/sub patterns and Redis for low-latency state
+\resumeItemListEnd
+
+\resumeProject
+    {CloudBridge: Unified Hub for GitHub Deployments [\href{https://cloudbridge.aryancodes.dev/}{$\nearrow$}] [\href{https://github.com/aryanc381/cloud-bridge}{\textcolor{darkblue}{\faGithub}}]}
+    {Next.js, React, Express, Node.js, TypeScript, MySQL, AWS-EC2, ShadCN, TailwindCSS}
+    {}
+    {}
+\resumeItemListStart
+    \item Built microservices-based deployment platform enabling automated, scalable code deployments through GitHub integration
+\resumeItemListEnd
+
+\resumeProject
+    {WebGenAI: No-Code E-Commerce Website Builder [\href{https://webgenai.aryancodes.dev/}{$\nearrow$}] [\href{https://github.com/aryanc381/web-builder-ai}{\textcolor{darkblue}{\faGithub}}]}
+    {Next.js, React, Express, Node.js, TypeScript, MongoDB, AWS-EC2, ShadCN, TailwindCSS, OpenAI}
+    {}
+    {}
+\resumeItemListStart
+    \item Built multi-agent orchestrated website builder that ships production-ready e-commerce sites from a single prompt -- no coding required
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-9mm}
+
+\section{\textbf{Skills}}
+\vspace{-0.4mm}
+\resumeHeadingSkillStart
+\resumeSubItem{Programming Languages}{: Java, JavaScript, TypeScript, Python}
+\resumeSubItem{Frameworks \& Tools}{: React, Next.js, Node.js, Express, Turborepo, Redux, Recoil, Flask, FastAPI}
+\resumeSubItem{Databases}{: PostgreSQL, MongoDB, MySQL, Prisma, Mongoose, Firebase, Redis}
+\resumeSubItem{Cloud \& DevOps}{: AWS, GCP, Cloudflare, Docker, GitHub Actions, CI/CD, Kubernetes}
+\resumeSubItem{AI/ML}{: TensorFlow, PyTorch, HuggingFace, LangChain, NLP, GenAI, ASR, TTS, Temporal AI}
+\resumeSubItem{Developer Tools}{: VS Code, NPM, Vite, Postman}
+\resumeHeadingSkillEnd
+\vspace{-3mm}
+
+\section{\textbf{Certifications}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR
+    {100xDev Web Development [\href{https://drive.google.com/drive/folders/1AGC33fZ7XyDbKcMfqDnINfEGlF6WGHwe?usp=sharing}{$\nearrow$}]}
+    {}
+    {}
+\resumePOR
+    {Stanford Deep Learning Specialization by Andrew Ng [\href{https://drive.google.com/drive/folders/1AGC33fZ7XyDbKcMfqDnINfEGlF6WGHwe?usp=sharing}{$\nearrow$}]}
+    {}
+    {}
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+\end{document}

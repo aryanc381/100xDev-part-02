@@ -1,5 +1,4 @@
-import http from 'http';
-import { WebSocketServer } from 'ws';
+import { WebSocketServer, WebSocket } from 'ws';
 import express from 'express';
 import cors from 'cors';
 const app = express();
@@ -12,7 +11,7 @@ app.get('/', (req, res) => {
     });
 });
 wss.on('connection', (socket) => {
-    socket.on('error', console.error);
+    socket.on('error', console.error); // if an error happens, do this
     socket.on('message', (data, isBinary) => {
         wss.clients.forEach(function each(client) {
             if (client.readyState === WebSocket.OPEN) {

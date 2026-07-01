@@ -1,4 +1,4 @@
-import { WebSocketServer } from 'ws';
+import { WebSocketServer, WebSocket } from 'ws';
 import express from 'express';
 import cors from 'cors';
 
@@ -15,8 +15,8 @@ app.get('/', (req, res) => {
 });
 
 wss.on('connection', (socket) => {
-    socket.on('error', console.error);
-    socket.on('message', (data, isBinary) => {
+    socket.on('error', console.error); // if an error happens, do this
+    socket.on('message', (data, isBinary) => { // whenever a client sends msg in your ws-connection, send other clients the broadcasted message.
         wss.clients.forEach(function each(client) {
             if(client.readyState === WebSocket.OPEN) {
                 client.send(data, { binary: isBinary });
